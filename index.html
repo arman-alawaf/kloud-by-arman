@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kloud Technologies Limited</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- bootstrap css  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+      integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
+      integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css"
+      integrity="sha512-x3gns+l9p4mIK7vYLOCUoFS2P1gavFvnO9Its8sr0AkUk46bgf9R51D8xeRUwCSk+W93YbXWi19BYzXDNBH5SA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css"
+      integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- data os  -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* 
+        font-family: "Roboto", sans-serif;
+        font-family: 'Sora', sans-serif; 
+        #8F18FF
+        #4F72FF
+        #0CD1FF
+
+        data-aos
+        fade-up, fade-down, fade-right, fade-left, fade-up-right, fade-up-left, fade-down-right, fade-down-left, 
+        flip-left, flip-right, flip-up, flip-down, 
+        slide-up, slide-down, slide-left, slide-right, 
+        zoom-in, zoom-in-up, zoom-in-down, zoom-in-left, zoom-in-right, zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
+
+        */
+      :root {
+        --color1: #8f18ff;
+        --color2: #4f72ff;
+        --color3: #0cd1ff;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      button,
+      label {
+        font-family: "Sora", sans-serif !important;
+      }
+      p,
+      span {
+        font-family: "Roboto", sans-serif !important;
+      }
+      a {
+        text-decoration: none;
+      }
+      .fs-12 {
+        font-size: 12px;
+      }
+      .fs-14 {
+        font-size: 14px;
+      }
+      label {
+        font-weight: 500;
+      }
+      .btn {
+        border-width: 2px;
+        font-weight: 600;
+        border-radius: 800px;
+      }
+      body {
+        background-color: white;
+        padding-top: 60px;
+      }
+      .btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: var(--color2);
+        --bs-btn-border-color: var(--color2);
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--color2);
+        --bs-btn-hover-border-color: var(--color2);
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: var(--color2);
+        --bs-btn-active-border-color: var(--color2);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: var(--color2);
+        --bs-btn-disabled-border-color: var(--color2);
+        background: linear-gradient(90deg, var(--color1), var(--color3));
+      }
+      .btn-primary:hover {
+        background-image: linear-gradient(90deg, var(--color3), var(--color1));
+      }
+      .btn-outline-primary {
+        --bs-btn-color: var(--color2);
+        --bs-btn-border-color: var(--color2);
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--color2);
+        --bs-btn-hover-border-color: var(--color2);
+        --bs-btn-focus-shadow-rgb: 13, 110, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: var(--color2);
+        --bs-btn-active-border-color: var(--color2);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: var(--color2);
+        --bs-btn-disabled-bg: transparent;
+        --bs-btn-disabled-border-color: var(--color2);
+        --bs-gradient: none;
+      }
+      .btn-outline-primary:hover {
+        background-image: linear-gradient(90deg, var(--color1), var(--color3));
+      }
+      .form-select:focus {
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: none;
+      }
+      .form-control:focus {
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-white fixed-top navbar-custom container-fluid px-2"
+      id="mainNavbar"
+    >
+      <style>
+        .navbar-custom {
+          transition: all 0.4s ease;
+          background: white;
+        }
+
+        /* default: nothing special (mobile/tablet keeps full width) */
+        .navbar-scrolled {
+          /* keep empty here */
+        }
+
+        /* only desktop/laptop (lg and up) gets pill + container effect */
+        @media (min-width: 992px) {
+          .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.2) !important; /* glass outside */
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+          }
+
+          .navbar-inner {
+            transition: all 0.4s ease;
+          }
+
+          .navbar-scrolled .navbar-inner {
+            background: #ffffff; /* solid white main part */
+            border-radius: 50rem;
+            max-width: 1140px; /* container-lg size */
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          }
+        }
+        /* Custom toggle button */
+        .navbar-toggler {
+          border: none;
+          outline: none;
+        }
+
+        .navbar-toggler .fa-bars,
+        .navbar-toggler .fa-xmark {
+          font-size: 1.25rem;
+        }
+        .navbar-toggler:focus {
+          text-decoration: none;
+          outline: 0;
+          box-shadow: none;
+        }
+      </style>
+      <div class="container-fluid navbar-inner">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/img/logo-main.png"
+            alt="logo"
+            style="height: 35px; width: auto"
+          />
+        </a>
+
+        <!-- Custom toggle button with Font Awesome -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark d-none"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2 justify-content-center">
+            <a
+              class="btn btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#Pay"
+            >
+              Smart Pay
+            </a>
+            <a
+              class="btn btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#Care"
+            >
+              Self Care
+            </a>
+          </div>
+        </div>
+      </div>
+      <script>
+        const navbar = document.getElementById("mainNavbar");
+        const toggler = navbar.querySelector(".navbar-toggler");
+        const iconOpen = toggler.querySelector(".fa-bars");
+        const iconClose = toggler.querySelector(".fa-xmark");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add("navbar-scrolled");
+          } else {
+            navbar.classList.remove("navbar-scrolled");
+          }
+        });
+
+        // Toggle menu icon
+        toggler.addEventListener("click", () => {
+          iconOpen.classList.toggle("d-none");
+          iconClose.classList.toggle("d-none");
+        });
+      </script>
+    </nav>
+
+    <section style="height: 100vh; background-color: var(--color3)"></section>
+
+    <section id="packages">
+      <div class="container py-5">
+        <div class="row justify-content-center py-5">
+          <div class="col-md-4 col-10">
+            <div class="card" data-aos="flip-left">
+              <img
+                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kloud Mini</h5>
+                <a
+                  href="#"
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#Mini"
+                  >Select Package</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10">
+            <div class="card" data-aos="flip-left">
+              <img
+                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kloud Stream</h5>
+                <a href="#" class="btn btn-outline-primary">Select Package</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10">
+            <div class="card" data-aos="flip-left">
+              <img
+                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kloud Neo</h5>
+                <a href="#" class="btn btn-outline-primary">Select Package</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height: 100vh; background-color: var(--color1)"></section>
+
+    <section id="packageForm">
+      <!-- <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form action="" class="card p-5">
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="name">
+                    Full Name
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="phone">
+                    Mobile Number
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="package">
+                    Package
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="package"
+                    id="package"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                    <option value="Kloud Mini 35Mbps BDT 699">
+                      Kloud Mini 35Mbps BDT 699
+                    </option>
+                    <option value="Kloud Stream 45Mbps BDT 899">
+                      Kloud Stream 45Mbps BDT 899
+                    </option>
+                    <option value="Kloud Neo 55Mbps BDT 999">
+                      Kloud Neo 55Mbps BDT 999
+                    </option>
+                    <option value="Kloud Boost + 75Mbps BDT 1499">
+                      Kloud Boost + 75Mbps BDT 1499
+                    </option>
+                    <option value="Kloud Gamers 85Mbps BDT 1399">
+                      Kloud Gamers 85Mbps BDT 1399
+                    </option>
+                    <option value="Kloud Edge 100Mbps BDT 1899">
+                      Kloud Edge 100Mbps BDT 1899
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="division">
+                    Division
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="division"
+                    id="division"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="district">
+                    District
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="district"
+                    id="district"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="thana">
+                    Thana
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="thana"
+                    id="thana"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="address">
+                    Address
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-outline-primary px-5">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <section id="blogs">
+      <div class="container py-5">
+        <div class="row justify-content-center py-5">
+          <div class="col-12 text-center mb-3">
+            <h3>News and Features</h3>
+            <p>
+              Journey into the heart of Carnival Internet – Our stories, our
+              values, our vision.
+            </p>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card blog-card overflow-hidden" data-aos="flip-left">
+              <div class="img-container">
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/004/216/831/large/3d-world-news-background-loop-free-video.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
+                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                <p class="fs-14">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Accusantium, nesciunt.
+                </p>
+                <p class="text-end mb-0 pb-0">
+                  <a
+                    >Read More
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <style>
+              .blog-card .img-container {
+                overflow: hidden; /* keep image inside card */
+                height: 200px;
+              }
+
+              @media (max-width: 992px) {
+                .blog-card img {
+                  transition: transform 0.6s ease;
+                  transform: scale(2) rotate(10deg);
+                }
+
+                .blog-card:hover img {
+                  transform: scale(1) rotate(0deg);
+                }
+              }
+            </style>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card blog-card overflow-hidden" data-aos="flip-left">
+              <div class="img-container">
+                <img
+                  src="https://img.freepik.com/free-photo/fake-news-works-coming-out-megaphone_23-2149261954.jpg?semt=ais_incoming&w=740&q=80"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
+                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                <p class="fs-14">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Accusantium, nesciunt.
+                </p>
+                <p class="text-end mb-0 pb-0">
+                  <a
+                    >Read More
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <style>
+              .blog-card .img-container {
+                overflow: hidden; /* keep image inside card */
+              }
+
+              .blog-card img {
+                transition: transform 0.6s ease;
+                transform: scale(2) rotate(10deg);
+              }
+
+              .blog-card:hover img {
+                transform: scale(1) rotate(0deg);
+              }
+            </style>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card blog-card overflow-hidden" data-aos="flip-left">
+              <div class="img-container">
+                <img
+                  src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/05/breaking-news-jpeg-1651538030.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
+                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                <p class="fs-14">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Accusantium, nesciunt.
+                </p>
+                <p class="text-end mb-0 pb-0">
+                  <a
+                    >Read More
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <style>
+              .blog-card .img-container {
+                overflow: hidden; /* keep image inside card */
+              }
+
+              .blog-card img {
+                transition: transform 0.6s ease;
+                transform: scale(2) rotate(10deg);
+              }
+
+              .blog-card:hover img {
+                transform: scale(1) rotate(0deg);
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="background-color: var(--color2); color: rgb(255, 255, 255)">
+        <div class="container">
+          <div class="row justify-content-center text-md-start text-center">
+            <div class="col-md-5">a</div>
+            <div class="col-md-4">b</div>
+            <div class="col-md-3">c</div>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: var(--color3); color: rgb(26, 26, 26)">
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-md-6 text-md-start text-center">
+              <h6 class="mb-0 pb-0">
+                © 2025 Kloud Technologies Limited. All Rights Reserved.
+              </h6>
+            </div>
+            <div class="col-md-6 text-md-end text-center">
+              <h6 class="mb-0 pb-0">
+                Powered By : <a href="#" class="text-white">Al-Awaf</a>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mini Package -->
+    <div
+      class="modal fade"
+      id="Mini"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="
+              background: linear-gradient(90deg, var(--color1), var(--color3));
+              color: white;
+            "
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Kloud Mini 35Mbps BDT 699
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name">
+                    Full Name
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone">
+                    Mobile Number
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="email">
+                    Email
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="division">
+                    Division
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="division"
+                    id="division"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="district">
+                    District
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="district"
+                    id="district"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="thana">
+                    Thana
+                    <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    name="thana"
+                    id="thana"
+                    class="form-select my-2"
+                    required
+                  >
+                    <option value="" hidden>Select</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="address">
+                    Address
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-primary px-5">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pay -->
+    <div
+      class="modal fade"
+      id="Pay"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="
+              background: linear-gradient(90deg, var(--color1), var(--color3));
+              color: white;
+            "
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Smart Pay</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="user_id">
+                    User ID
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="user_id"
+                    id="user_id"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-primary px-5">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Care -->
+    <div
+      class="modal fade"
+      id="Care"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="
+              background: linear-gradient(90deg, var(--color1), var(--color3));
+              color: white;
+            "
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Self Care</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="user_id">
+                    User ID
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="user_id"
+                    id="user_id"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="password">
+                    Password
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-primary px-5">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor">
+      <style>
+        body {
+          cursor: none;
+        }
+
+        .cursor {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background-color: rgba(143, 24, 255, 0.7);
+          border-radius: 50%;
+          pointer-events: none;
+          transform: translate(-50%, -50%);
+          transition: width 0.2s ease, height 0.2s ease,
+            background-color 0.2s ease;
+          z-index: 9999;
+          mix-blend-mode: difference;
+        }
+
+        a:hover ~ .cursor,
+        button:hover ~ .cursor {
+          width: 40px;
+          height: 40px;
+          background-color: rgba(15, 200, 255, 0.7);
+        }
+      </style>
+      <script>
+        const cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousemove", (e) => {
+          cursor.style.top = e.clientY + "px";
+          cursor.style.left = e.clientX + "px";
+        });
+      </script>
+    </div>
+
+    <div class="back-to-top" id="backToTop" data-aos="zoom-out">
+      <style>
+        .back-to-top {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          width: 40px;
+          height: 40px;
+          background-color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          box-shadow: 0 0 4px var(--color2);
+          animation: shadow-blink 2s infinite;
+        }
+        @keyframes shadow-blink {
+          0%,
+          100% {
+            box-shadow: 0 0 4px 3px var(--color3);
+          }
+          50% {
+            box-shadow: 0 0 8px 3px var(--color1);
+          }
+        }
+
+        .back-to-top:hover {
+          background-color: var(--color2);
+          color: white;
+          transform: translateY(-3px);
+        }
+
+        .back-to-top.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .back-to-top i {
+          font-size: 18px;
+        }
+      </style>
+      <i class="fa-solid fa-arrow-up"></i>
+      <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            backToTop.classList.add("show");
+          } else {
+            backToTop.classList.remove("show");
+          }
+        });
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      </script>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/js/bangladesh.js"></script>
+
+    <!-- data os -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // duration: 1000,
+        // once: true,
+      });
+    </script>
+  </body>
+</html>
