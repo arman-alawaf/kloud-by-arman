@@ -272,7 +272,13 @@
               <a class="nav-link" href="#blogs">Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#Contact"
+                >Contact</a
+              >
             </li>
           </ul>
           <div class="d-flex gap-2 justify-content-center">
@@ -364,39 +370,38 @@
 
     <section style="height: 100vh; background-color: var(--color3)"></section>
 
-    <section id="packages" style="min-height: 100vh;">
+    <section id="packages" style="min-height: 100vh">
       <style>
+        .package-box img.package-icon {
+          content: url("./assets/img/icon-bw.png"); /* default (black & white) */
+          transition: all 0.3s ease;
+        }
 
-  .package-box img.package-icon {
-    content: url("./assets/img/icon-bw.png"); /* default (black & white) */
-    transition: all 0.3s ease;
-  }
+        .package-box:hover img.package-icon {
+          content: url("./assets/img/icon-color.png"); /* hover (colored) */
+        }
+        .package-features {
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: all 1s ease;
+        }
+        .package-box:hover .package-features {
+          max-height: 500px;
+          opacity: 1;
+        }
 
-  .package-box:hover img.package-icon {
-    content: url("./assets/img/icon-color.png"); /* hover (colored) */
-  }
-    .package-features {
-      max-height: 0;            
-      opacity: 0;               
-      overflow: hidden;         
-      transition: all 1s ease;
-    }
-    .package-box:hover .package-features {
-      max-height: 500px;        
-      opacity: 1;               
-    }
-
-  @media (max-width: 991px) { 
-    .package-features {
-      max-height: none !important;
-      opacity: 1 !important;
-      overflow: visible !important;
-    }
-  }
+        @media (max-width: 991px) {
+          .package-features {
+            max-height: none !important;
+            opacity: 1 !important;
+            overflow: visible !important;
+          }
+        }
       </style>
       <div class="container py-5">
         <div class="row justify-content-center py-5">
-          <div class="col-12 text-center mb-3">
+          <div class="col-12 text-center mb-3" data-aos="zoom-in">
             <h3>Most Popular Packages</h3>
             <p>
               Journey into the heart of Carnival Internet – Our stories, our
@@ -765,16 +770,128 @@
     </section>
 
     <footer>
-      <div style="background-color: var(--color2); color: rgb(255, 255, 255)">
-        <div class="container">
+      <style>
+        .footer-touch-link {
+          width: 30px;
+          height: 30px;
+          background: transparent;
+          border-radius: 5px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+        .footer-touch-link i {
+          font-size: 22px;
+          transition: all 0.3s;
+        }
+        .footer-social-link {
+          width: 50px;
+          height: 50px;
+          background: transparent;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+        .footer-social-link i {
+          font-size: 33px;
+          transition: all 0.3s;
+        }
+        .footer-social-link:hover {
+          background: white;
+        }
+        .footer-social-link:hover i {
+          transform: scale(1.2);
+        }
+      </style>
+      <div style="background-color: #eee; color: #222">
+        <div class="container py-5">
           <div class="row justify-content-center text-md-start text-center">
-            <div class="col-md-5">a</div>
-            <div class="col-md-4">b</div>
-            <div class="col-md-3">c</div>
+            <div class="col-md-5">
+              <a href="#">
+                <img
+                  src="./assets/img/logo-main.png"
+                  alt="logo"
+                  style="height: 50px; width: auto"
+                />
+              </a>
+              <h5 class="mt-4 mb-3">Quality Policy</h5>
+              <p class="mb-0">
+                Facilitate seamless information flow through innovative ICT
+                Infrastructure and services.
+              </p>
+              <p>ISO 9001:2015 Certified Company</p>
+              <h5 class="mt-4 mb-3">Security Policy</h5>
+              <p class="mb-0">
+                Kloud is committed to ensuring information security by complying
+                with applicable ISO 27001:2022 standards and regulatory
+                requirements.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="mt-md-0 mt-4 mb-4">Get In Touch</h5>
+
+              <div class="mb-4">
+                <a href="https://maps.app.goo.gl/WRWi57zh7T5jjx2H7" target="_blank" class="footer-touch-link"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></a>
+                <span class="fs-5 ps-2">Address</span>
+                <p class="mt-2">
+                  Dom-Inno, House-13, Road-7, Block-F, Banani,1213, Dhaka,
+                  Bangladesh
+                </p>
+              </div>
+              <div class="mb-4">
+                <a href="tel:+8809649161216" class="footer-touch-link"
+                  ><i class="fa-solid fa-phone"></i
+                ></a>
+                <span class="fs-5 ps-2">Phone</span>
+                <p class="mt-2">+880 9649-161216</p>
+              </div>
+              <div class="">
+                <a href="mailto:contact@kloud.com.bd" class="footer-touch-link"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+                <span class="fs-5 ps-2">Email</span>
+                <p class="mt-2">contact@kloud.com.bd</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="mt-md-0 mt-4 mb-4">Quick Links</h5>
+              <p><a >Career</a></p>
+              <p><a >Our Policies</a></p>
+              <p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#Care"
+                  >Self Care</a
+                >
+              </p>
+              <h5 class="mt-5 mb-3">Follow Us</h5>
+              <div
+                class="d-flex gap-2 justify-content-center justify-content-md-start"
+              >
+                <a href="https://www.facebook.com/Kloud.Technologies.Ltd" target="_blank" class="footer-social-link"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+                <a  target="_blank" class="footer-social-link"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+                <a  target="_blank" class="footer-social-link"
+                  ><i class="fa-brands fa-square-x-twitter"></i
+                ></a>
+                <a href="https://wa.me/8801313752575" target="_blank" class="footer-social-link"
+                  ><i class="fa-brands fa-square-whatsapp"></i
+                ></a>
+                <a href="https://www.linkedin.com/company/kloudtechnologieslimited" target="_blank" class="footer-social-link"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div style="background-color: var(--color3); color: rgb(26, 26, 26)">
+      <div style="background-color: #fff; color: rgb(26, 26, 26)">
         <div class="container py-2">
           <div class="row">
             <div class="col-md-6 text-md-start text-center">
@@ -783,14 +900,120 @@
               </h6>
             </div>
             <div class="col-md-6 text-md-end text-center">
-              <h6 class="mb-0 pb-0">
-                Powered By : <a href="#" class="text-white">Al-Awaf</a>
-              </h6>
+              <h6 class="mb-0 pb-0">Powered By : <a href="https://alawaf.com.bd/" target="_blank">Al-Awaf</a></h6>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Contact -->
+    <div
+      class="modal fade"
+      id="Contact"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="
+              background: linear-gradient(90deg, var(--color1), var(--color3));
+              color: white;
+            "
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Your trust, our greatest priority.
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name">
+                    Full Name
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone">
+                    Mobile Number
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="email">
+                    Email
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="subject">
+                    Subject
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    class="form-control my-2"
+                    required
+                  />
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="message">
+                    Message
+                    <span class="text-danger">*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="2"
+                    cols="33"
+                    class="form-control my-2"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="button" class="btn btn-primary px-5">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Mini Package -->
     <div
