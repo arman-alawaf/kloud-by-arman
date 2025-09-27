@@ -1,98 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISP Style Mouse Trail</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      overflow: hidden;
-      background: #fff; /* Dark ISP-style background */
-      cursor: none; /* Hide default cursor */
-    }
+<div class="image-stack">
+  <div class="image-card card1"></div>
+  <div class="image-card card2"></div>
+</div>
 
-    .trail-dot {
-      position: fixed;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #8F18FF, #0CD1FF);
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      filter: drop-shadow(0 0 6px rgba(140,24,255,0.7))
-              drop-shadow(0 0 6px rgba(12,209,255,0.7));
-    }
+<style>
 
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-  </style>
-</head>
-<body>
-
-<canvas id="cursorCanvas"></canvas>
-
-<script>
-  const canvas = document.getElementById('cursorCanvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const trail = [];
-  const trailLength = 25;
-
-  const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-
-  document.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    trail.unshift({ x: mouse.x, y: mouse.y });
-    if (trail.length > trailLength) trail.pop();
-
-    ctx.beginPath();
-    for (let i = 0; i < trail.length - 1; i++) {
-      const t = trail[i];
-      const next = trail[i + 1];
-      ctx.strokeStyle = `rgba(143, 24, 255, ${1 - i/trailLength})`;
-      ctx.lineWidth = 2;
-      ctx.moveTo(t.x, t.y);
-      ctx.lineTo(next.x, next.y);
-      ctx.stroke();
-    }
-    ctx.closePath();
-
-    // glowing dot at cursor
-    ctx.beginPath();
-    ctx.fillStyle = "#0CD1FF";
-    ctx.shadowBlur = 20;
-    ctx.shadowColor = "#8F18FF";
-    ctx.arc(mouse.x, mouse.y, 6, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.shadowBlur = 0;
-    ctx.closePath();
-
-    requestAnimationFrame(animate);
+  .image-stack {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1200px; /* 3D depth */
   }
 
-  animate();
+  .image-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    transition: transform 1s ease, opacity 1s ease;
+  }
 
-  // Resize canvas
-  window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
+  .card1 {
+    background-image: url("https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630");
+  }
+
+  .card2 {
+    background-image: url("https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D");
+  }
+
+  /* Premium shuffle effect */
+  .image-card.active {
+    transform: translateY(0) rotateY(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .image-card.hidden {
+    transform: translateY(50px) rotateY(20deg) scale(0.9);
+    opacity: 0.6;
+    z-index: 1;
+  }
+</style>
+
+<script>
+  const cards = document.querySelectorAll(".image-card");
+  let current = 0;
+
+  function shuffleCards() {
+    cards.forEach((card, i) => {
+      card.classList.remove("active", "hidden");
+      if (i === current) {
+        card.classList.add("active");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+
+    current = (current + 1) % cards.length;
+  }
+
+  // Initialize + run every 4s
+  shuffleCards();
+  setInterval(shuffleCards, 4000);
 </script>
-
-</body>
-</html>
