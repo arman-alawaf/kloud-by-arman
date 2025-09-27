@@ -264,13 +264,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./packages.html">Packages</a>
+              <a class="nav-link active" href="#packages">Packages</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#blogs">Blogs</a>
@@ -325,56 +325,7 @@
       </script>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="./assets/img/sliders/11.webp"
-            class="d-none d-md-block w-100"
-            alt="..."
-          />
-          <img
-            src="./assets/img/sliders/12.webp"
-            class="d-block d-md-none w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    <section style="height: 100vh; background-color: var(--color3)"></section>
-
-    <section id="packages" style="min-height: 100vh">
+    <section id="packages">
       <style>
         .package-box img.package-icon {
           content: url("./assets/img/icon-bw.png");
@@ -384,34 +335,10 @@
         .package-box:hover img.package-icon {
           content: url("./assets/img/icon-color.png");
         }
-        .package-features {
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden;
-          transition: all 1s ease;
-        }
-        .package-box:hover .package-features {
-          max-height: 500px;
-          opacity: 1;
-        }
-
-        @media (max-width: 991px) {
-          .package-features {
-            max-height: none !important;
-            opacity: 1 !important;
-            overflow: visible !important;
-          }
-        }
       </style>
       <div class="container py-5">
-        <div class="row justify-content-center py-5">
-          <div class="col-12 text-center mb-3" data-aos="zoom-in">
-            <h3>Most Popular Packages</h3>
-            <p>
-              Journey into the heart of Carnival Internet – Our stories, our
-              values, our vision.
-            </p>
-          </div>
+        <div class="row justify-content-center">
+          
           <div class="col-md-4 col-10 mb-3">
             <div class="card package-box" data-aos="flip-left">
               <div class="card-body text-center">
@@ -511,6 +438,107 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card package-box" data-aos="flip-left">
+              <div class="card-body text-center">
+                <div>
+                  <img
+                    src="./assets/img/icon-bw.png"
+                    alt=""
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Mini</h5>
+                <h6 class="card-title">35 Mbps - BDT 699</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary select-package"
+                    data-bs-toggle="modal"
+                    data-bs-target="#PackageModal"
+                    data-title="Kloud Mini"
+                    data-speed="35 Mbps"
+                    data-price="BDT 699"
+                    >Select Package</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card package-box" data-aos="flip-left">
+              <div class="card-body text-center">
+                <div>
+                  <img
+                    src="./assets/img/icon-bw.png"
+                    alt=""
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Gamers</h5>
+                <h6 class="card-title">85 Mbps - BDT 1399</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary select-package"
+                    data-bs-toggle="modal"
+                    data-bs-target="#PackageModal"
+                    data-title="Kloud Gamers"
+                    data-speed="85 Mbps"
+                    data-price="BDT 1399"
+                    >Select Package</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card package-box" data-aos="flip-left">
+              <div class="card-body text-center">
+                <div>
+                  <img
+                    src="./assets/img/icon-bw.png"
+                    alt=""
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Elite</h5>
+                <h6 class="card-title">300 Mbps - BDT 4499</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary select-package"
+                    data-bs-toggle="modal"
+                    data-bs-target="#PackageModal"
+                    data-title="Kloud Elite"
+                    data-speed="300 Mbps"
+                    data-price="BDT 4499"
+                    >Select Package</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -668,142 +696,6 @@
           });
         });
       </script>
-    </section>
-
-    <section style="height: 100vh; background-color: var(--color1)"></section>
-
-    <section id="blogs">
-      <div class="container py-5">
-        <div class="row justify-content-center py-5">
-          <div class="col-12 text-center mb-3">
-            <h3>News and Features</h3>
-            <p>
-              Journey into the heart of Carnival Internet – Our stories, our
-              values, our vision.
-            </p>
-          </div>
-          <div class="col-md-4 col-10 mb-3">
-            <div class="card blog-card overflow-hidden" data-aos="flip-left">
-              <div class="img-container">
-                <img
-                  src="https://static.vecteezy.com/system/resources/thumbnails/004/216/831/large/3d-world-news-background-loop-free-video.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
-                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
-                <p class="fs-14">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Accusantium, nesciunt.
-                </p>
-                <p class="text-end mb-0 pb-0">
-                  <a
-                    >Read More
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-            <style>
-              .blog-card .img-container {
-                overflow: hidden; /* keep image inside card */
-                height: 200px;
-              }
-
-              @media (max-width: 992px) {
-                .blog-card img {
-                  transition: transform 0.6s ease;
-                  transform: scale(2) rotate(10deg);
-                }
-
-                .blog-card:hover img {
-                  transform: scale(1) rotate(0deg);
-                }
-              }
-            </style>
-          </div>
-          <div class="col-md-4 col-10 mb-3">
-            <div class="card blog-card overflow-hidden" data-aos="flip-left">
-              <div class="img-container">
-                <img
-                  src="https://img.freepik.com/free-photo/fake-news-works-coming-out-megaphone_23-2149261954.jpg?semt=ais_incoming&w=740&q=80"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
-                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
-                <p class="fs-14">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Accusantium, nesciunt.
-                </p>
-                <p class="text-end mb-0 pb-0">
-                  <a
-                    >Read More
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-            <style>
-              .blog-card .img-container {
-                overflow: hidden; /* keep image inside card */
-              }
-
-              .blog-card img {
-                transition: transform 0.6s ease;
-                transform: scale(2) rotate(10deg);
-              }
-
-              .blog-card:hover img {
-                transform: scale(1) rotate(0deg);
-              }
-            </style>
-          </div>
-          <div class="col-md-4 col-10 mb-3">
-            <div class="card blog-card overflow-hidden" data-aos="flip-left">
-              <div class="img-container">
-                <img
-                  src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/05/breaking-news-jpeg-1651538030.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p><i class="fa-solid fa-calendar"></i> September 11, 2023</p>
-                <h5 class="card-title">Lorem ipsum dolor sit.</h5>
-                <p class="fs-14">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Accusantium, nesciunt.
-                </p>
-                <p class="text-end mb-0 pb-0">
-                  <a
-                    >Read More
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-            <style>
-              .blog-card .img-container {
-                overflow: hidden; /* keep image inside card */
-              }
-
-              .blog-card img {
-                transition: transform 0.6s ease;
-                transform: scale(2) rotate(10deg);
-              }
-
-              .blog-card:hover img {
-                transform: scale(1) rotate(0deg);
-              }
-            </style>
-          </div>
-        </div>
-      </div>
     </section>
 
     <footer>
