@@ -364,9 +364,17 @@
 
     <section style="height: 100vh; background-color: var(--color3)"></section>
 
-    <section id="packages">
+    <section id="packages" style="min-height: 100vh;">
       <style>
 
+  .package-box img.package-icon {
+    content: url("./assets/img/icon-bw.png"); /* default (black & white) */
+    transition: all 0.3s ease;
+  }
+
+  .package-box:hover img.package-icon {
+    content: url("./assets/img/icon-color.png"); /* hover (colored) */
+  }
     .package-features {
       max-height: 0;            
       opacity: 0;               
@@ -400,14 +408,74 @@
               <div class="card-body text-center">
                 <div>
                   <img
-                    src="./assets/img/favicon.png"
+                    src="./assets/img/icon-bw.png"
                     alt=""
-                    class="img-fluid"
-                    style="height: 50px; width: auto"
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
                   />
                 </div>
                 <h5 class="card-title fw-bold">Kloud Mini</h5>
-                <h6 class="card-title fw-bold">45 Mbps - BDT 699</h6>
+                <h6 class="card-title">35 Mbps - BDT 699</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Mini"
+                    >Select Package</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card package-box" data-aos="flip-left">
+              <div class="card-body text-center">
+                <div>
+                  <img
+                    src="./assets/img/icon-bw.png"
+                    alt=""
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Gamers</h5>
+                <h6 class="card-title">85 Mbps - BDT 1399</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Mini"
+                    >Select Package</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-10 mb-3">
+            <div class="card package-box" data-aos="flip-left">
+              <div class="card-body text-center">
+                <div>
+                  <img
+                    src="./assets/img/icon-bw.png"
+                    alt=""
+                    class="img-fluid mb-3 package-icon"
+                    style="height: 40px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Elite</h5>
+                <h6 class="card-title">300 Mbps - BDT 4499</h6>
                 <div class="package-features mt-3">
                   <hr />
                   <p>Bufferless Browsing</p>
