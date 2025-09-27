@@ -315,75 +315,113 @@
       </script>
     </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/img/sliders/11.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/sliders/12.webp" class="d-block d-md-none w-100" alt="...">
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./assets/img/sliders/11.webp"
+            class="d-none d-md-block w-100"
+            alt="..."
+          />
+          <img
+            src="./assets/img/sliders/12.webp"
+            class="d-block d-md-none w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
     <section style="height: 100vh; background-color: var(--color3)"></section>
 
     <section id="packages">
+      <style>
+
+    .package-features {
+      max-height: 0;            
+      opacity: 0;               
+      overflow: hidden;         
+      transition: all 1s ease;
+    }
+    .package-box:hover .package-features {
+      max-height: 500px;        
+      opacity: 1;               
+    }
+
+  @media (max-width: 991px) { 
+    .package-features {
+      max-height: none !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+    }
+  }
+      </style>
       <div class="container py-5">
         <div class="row justify-content-center py-5">
-          <div class="col-md-4 col-10 mb-3">
-            <div class="card" data-aos="flip-left">
-              <img
-                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <h5 class="card-title">Kloud Mini</h5>
-                <a
-                  href="#"
-                  class="btn btn-outline-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#Mini"
-                  >Select Package</a
-                >
-              </div>
-            </div>
+          <div class="col-12 text-center mb-3">
+            <h3>Most Popular Packages</h3>
+            <p>
+              Journey into the heart of Carnival Internet – Our stories, our
+              values, our vision.
+            </p>
           </div>
           <div class="col-md-4 col-10 mb-3">
-            <div class="card" data-aos="flip-left">
-              <img
-                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
-                class="card-img-top"
-                alt="..."
-              />
+            <div class="card package-box" data-aos="flip-left">
               <div class="card-body text-center">
-                <h5 class="card-title">Kloud Stream</h5>
-                <a href="#" class="btn btn-outline-primary">Select Package</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-10 mb-3">
-            <div class="card" data-aos="flip-left">
-              <img
-                src="https://media.istockphoto.com/id/503844546/photo/fiber-optic-cables-and-utp-network-cables.jpg?s=612x612&w=0&k=20&c=-yxSsgsmoy84OsPq3Qsp7_EHLB6QN9t0QzI50I-SJq4="
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <h5 class="card-title">Kloud Neo</h5>
-                <a href="#" class="btn btn-outline-primary">Select Package</a>
+                <div>
+                  <img
+                    src="./assets/img/favicon.png"
+                    alt=""
+                    class="img-fluid"
+                    style="height: 50px; width: auto"
+                  />
+                </div>
+                <h5 class="card-title fw-bold">Kloud Mini</h5>
+                <h6 class="card-title fw-bold">45 Mbps - BDT 699</h6>
+                <div class="package-features mt-3">
+                  <hr />
+                  <p>Bufferless Browsing</p>
+                  <p>Content Server (KloudNix, BDIX)</p>
+                  <p>24/7 Customer Support</p>
+                  <p>IPV6 Available</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Mini"
+                    >Select Package</a
+                  >
+                </div>
               </div>
             </div>
           </div>
