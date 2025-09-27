@@ -384,7 +384,7 @@
           class="row justify-content-md-between justify-content-center align-items-start py-5"
         >
           <div class="col-md-6 col-10 order-2 order-md-1">
-            <p class="fs-5 text-center">
+            <p class="fs-5 text-center" data-aos="slide-up">
               Launched in <b>2019</b>, <b>Kloud Technologies Limited</b> is a
               leading ISP and NIX in Bangladesh, delivering blazing-fast, secure
               connectivity to homes, businesses, and enterprises nationwide.
@@ -483,15 +483,15 @@
               }
 
               .img1 {
-                background-image: url("./assets/img/about3.jpg");
+                background-image: url("./assets/img/about1.webp");
               }
 
               .img2 {
-                background-image: url("./assets/img/about4.jpg");
+                background-image: url("./assets/img/about2.webp");
               }
 
               /* Active card (front view) */
-              .active {
+              .about-active {
                 transform: translate(0, 0) rotate(0) scale(1.1);
                 opacity: 1;
                 z-index: 2;
@@ -511,9 +511,9 @@
 
               function uniqueShuffle() {
                 cards.forEach((card, i) => {
-                  card.classList.remove("active", "hidden");
+                  card.classList.remove("about-active", "hidden");
                   if (i === current) {
-                    card.classList.add("active");
+                    card.classList.add("about-active");
                   } else {
                     card.classList.add("hidden");
                   }
