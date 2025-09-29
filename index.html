@@ -76,8 +76,7 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/icon-float.css" />
     <link rel="stylesheet" href="./assets/css/package-card.css" />
-    <link rel="stylesheet" href="./assets/css/blog-card.css">
-
+    <link rel="stylesheet" href="./assets/css/blog-card.css" />
   </head>
   <body>
     <nav
@@ -217,56 +216,188 @@
       </script>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+      <style>
+        .carousel-indicators [data-bs-target] {
+          box-sizing: content-box;
+          flex: 0 1 auto;
+          width: 15px;
+          height: 15px;
+          padding: 0;
+          margin-right: 10px;
+          margin-left: 10px;
+          text-indent: -999px;
+          cursor: pointer;
+          background-color: var(--color2);
+          background-clip: padding-box;
+          border: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-radius: 100%;
+          opacity: 0.5;
+          transition: opacity 0.6s ease;
+        }
+        .carousel-indicators .active {
+          opacity: 1;
+        }
+        .floating-img {
+          animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      </style>
       <div class="carousel-indicators">
         <button
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide-to="0"
           class="active"
           aria-current="true"
           aria-label="Slide 1"
         ></button>
-        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="./assets/img/sliders/11.webp"
-            class="d-none d-md-block w-100"
-            alt="..."
-          />
-          <img
-            src="./assets/img/sliders/12.webp"
-            class="d-block d-md-none w-100"
-            alt="..."
-          />
+        <div class="carousel-item active" data-bs-interval="4000">
+          <div
+            style="
+              width: 100%;
+              min-height: 90vh;
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div class="container">
+              <div class="row justify-content-around align-items-center">
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://carnival.com.bd/uploads/cms/home-banner-text.svg"
+                    alt="image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/998/318/non_2x/isp-or-internet-service-provider-cartoon-illustration-with-keywords-and-icons-for-intranet-access-secure-network-connection-and-privacy-protection-vector.jpg"
+                    alt="image"
+                    class="img-fluid rounded floating-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <div
+            style="
+              width: 100%;
+              min-height: 90vh;
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div class="container">
+              <div class="row justify-content-around align-items-center">
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://carnival.com.bd/uploads/cms/Home%20Page_450K.svg"
+                    alt="image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/998/317/non_2x/isp-or-internet-service-provider-cartoon-illustration-with-keywords-and-icons-for-intranet-access-secure-network-connection-and-privacy-protection-vector.jpg"
+                    alt="image"
+                    class="img-fluid rounded floating-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <div
+            style="
+              width: 100%;
+              min-height: 90vh;
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div class="container">
+              <div class="row justify-content-around align-items-center">
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://carnival.com.bd/uploads/cms/home-banner-text-03.svg"
+                    alt="image"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="col-md-5 p-4 p-md-0">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/998/311/non_2x/isp-or-internet-service-provider-cartoon-illustration-with-keywords-and-icons-for-intranet-access-secure-network-connection-and-privacy-protection-vector.jpg"
+                    alt="image"
+                    class="img-fluid rounded floating-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleIndicators"
+        data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="text-primary fs-1"
+          ><i class="bi bi-caret-left-fill"></i
+        ></span>
       </button>
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleIndicators"
+        data-bs-target="#carouselExampleCaptions"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="text-primary fs-1"
+          ><i class="bi bi-caret-right-fill"></i
+        ></span>
       </button>
     </div>
 
-    <section id="about"
+    <section
+      id="about"
       style="
-        background-color: #0CD1FF30;
+        background-color: #0cd1ff30;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -288,7 +419,6 @@
               digital divide, driving <b>innovation</b>, <b>growth</b>, and a
               <b>future-ready Bangladesh</b>.
             </p>
-
           </div>
           <div
             class="col-md-4 col-10 mb-5 mb-md-0 pb-4 pb-md-0 order-1 order-md-2"
@@ -459,7 +589,10 @@
                 <h6 class="card-title">85 Mbps - BDT 1399</h6>
                 <div class="package-features mt-3">
                   <hr />
-                  <p>Including Kloud Boost+ <br> Local Cache - Popular Games</p>
+                  <p>
+                    Including Kloud Boost+ <br />
+                    Local Cache - Popular Games
+                  </p>
                   <p>Low Latency Popular Games</p>
                   <a
                     href="#"
@@ -490,7 +623,10 @@
                 <h6 class="card-title">300 Mbps - BDT 4499</h6>
                 <div class="package-features mt-3">
                   <hr />
-                  <p>Including Boost+ & Gamers <br> Topnotch Speed (KloudNix BDIX)</p>
+                  <p>
+                    Including Boost+ & Gamers <br />
+                    Topnotch Speed (KloudNix BDIX)
+                  </p>
                   <p>4k Streaming</p>
                   <a
                     href="#"
@@ -531,24 +667,9 @@
       </script>
     </section>
 
-    <section
-      id="services"
-      style="background-color: #8F18FF30;"
-    >
-      <iframe data-aos="zoom-in" 
-        src="https://openspeedtest.com/speedtest" 
-        style="border:none; width:100%; height:500px; overflow:hidden;" 
-        allow="autoplay; fullscreen">
-    </iframe>
-    <style>
-      use
-      #logo-Desk{
-        display: none !important;
-      }
-    </style>
-  </section>
+    <section id="" style="background-color: #8f18ff30; min-height: 100vh;">
 
-
+    </section>
 
     <section id="blogs">
       <div class="container py-5">
@@ -1269,7 +1390,5 @@
         // once: true,
       });
     </script>
-
-
   </body>
 </html>
