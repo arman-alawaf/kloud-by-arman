@@ -26,7 +26,8 @@ h6,
 a,
 button,
 label {
-  font-family: "Sora", sans-serif !important;
+  font-family: "Sora", sans-serif;
+  font-family: "Gabarito", sans-serif !important;
 }
 p,
 span {

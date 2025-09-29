@@ -27,6 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora&display=swap"
       rel="stylesheet"
     />
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link
@@ -73,10 +74,10 @@
     <!-- data os  -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/icon-float.css" />
     <link rel="stylesheet" href="./assets/css/package-card.css" />
     <link rel="stylesheet" href="./assets/css/blog-card.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <nav
@@ -90,9 +91,7 @@
         }
 
         /* default: nothing special (mobile/tablet keeps full width) */
-        .navbar-scrolled {
-          /* keep empty here */
-        }
+        /* .navbar-scrolled {} */
 
         /* only desktop/laptop (lg and up) gets pill + container effect */
         @media (min-width: 992px) {
@@ -291,14 +290,14 @@
           >
             <div class="container">
               <div class="row justify-content-around align-items-center">
-                <div class="col-md-5 p-4 p-md-0">
+                <div class="col-md-5 p-4 p-lg-0">
                   <img
                     src="https://carnival.com.bd/uploads/cms/home-banner-text.svg"
                     alt="image"
                     class="img-fluid"
                   />
                 </div>
-                <div class="col-md-5 p-4 p-md-0">
+                <div class="col-md-5 p-4 p-lg-0">
                   <img
                     src="https://static.vecteezy.com/system/resources/previews/009/998/318/non_2x/isp-or-internet-service-provider-cartoon-illustration-with-keywords-and-icons-for-intranet-access-secure-network-connection-and-privacy-protection-vector.jpg"
                     alt="image"
@@ -407,8 +406,8 @@
         <div
           class="row justify-content-md-between justify-content-center align-items-start py-5"
         >
-          <div class="col-md-6 col-10 order-2 order-md-1 text-center">
-            <h3 class="mb-3 fw-bold" data-aos="zoom-out">The Kloud Journey</h3>
+          <div class="col-lg-6 order-2 order-lg-1 text-center">
+            <h2 class="mb-4 fw-bold" data-aos="zoom-in">The Kloud Journey</h2>
             <p class="fs-5" data-aos="slide-up">
               Launched in <b>2019</b>, <b>Kloud Technologies Limited</b> is a
               leading ISP and NIX in Bangladesh, delivering blazing-fast, secure
@@ -421,7 +420,7 @@
             </p>
           </div>
           <div
-            class="col-md-4 col-10 mb-5 mb-md-0 pb-4 pb-md-0 order-1 order-md-2"
+            class="col-lg-4 mb-5 mb-lg-0 pb-4 pb-lg-0 order-1 order-lg-2 d-flex justify-content-center"
           >
             <!-- <div
               class="one-box"
@@ -542,7 +541,7 @@
             <h2 class="fw-bold">Most Popular Packages</h2>
             <p class="fs-5">Where Speed Meets Reliability</p>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4">
             <div class="card package-box" data-aos="flip-left">
               <div class="card-body text-center">
                 <div>
@@ -574,7 +573,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4">
             <div class="card package-box" data-aos="flip-left">
               <div class="card-body text-center">
                 <div>
@@ -608,7 +607,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4">
             <div class="card package-box" data-aos="flip-left">
               <div class="card-body text-center">
                 <div>
@@ -667,8 +666,39 @@
       </script>
     </section>
 
-    <section id="" style="background-color: #8f18ff30; min-height: 100vh;">
-
+    <section id="" style="background-color: #8f18ff30; min-height: 100vh; display: flex; align-items: center;">
+      <style>
+        .who-text-box{
+background-color: white;border-radius: 30px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-left: -50px;
+text-align: center;
+        }
+        @media (max-width: 800px) {
+          .who-text-box {
+            margin-left: 0;
+            margin-top: -80px;
+          }
+        }
+      </style>
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <img data-aos="flip-left" src="./assets/img/Who-we-are_2.webp" alt="image" class="img-fluid" style="border-radius: 30px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);" />
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="who-text-box px-4 py-4 py-md-5" data-aos="zoom-in">
+              <h2 class="fw-bold">Who We Are</h2>
+              <p class="fs-14">
+                At Kloud Technologies Limited, we are more than just an ISP; we
+                are a catalyst for digital transformation in Bangladesh. Since
+                our inception in 2019, we have been committed to bridging the
+                digital divide by providing reliable, high-speed internet
+                connectivity to homes, businesses, and enterprises across the
+                nation. Our state-of-the-art infrastructure, combined with our
+                passion for innovation, allows us to deliver cutting-edge
+                solutions that empower our clients to thrive in the digital age.
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="blogs">
@@ -797,7 +827,7 @@
       <div style="background-color: #eee; color: #222">
         <div class="container py-5">
           <div class="row justify-content-center text-md-start text-center">
-            <div class="col-md-5 col-10">
+            <div class="col-lg-4 col-md-5 col-10">
               <a href="#">
                 <img
                   src="./assets/img/logo-main.png"
@@ -818,7 +848,7 @@
                 requirements.
               </p>
             </div>
-            <div class="col-md-4 col-10">
+            <div class="col-lg-4 col-md-4 col-10">
               <h5 class="mt-md-0 mt-4 mb-4 fw-bold">Get In Touch</h5>
 
               <div class="mb-4">
@@ -849,7 +879,7 @@
                 <p class="mt-2">contact@kloud.com.bd</p>
               </div>
             </div>
-            <div class="col-md-3 col-10">
+            <div class="col-lg-4 col-md-3 col-10">
               <h5 class="mt-md-0 mt-4 mb-4 fw-bold">Quick Links</h5>
               <p><a>Career</a></p>
               <p><a>Our Policies</a></p>
@@ -860,7 +890,7 @@
               </p>
               <h5 class="mt-5 mb-3 fw-bold">Follow Us</h5>
               <div
-                class="d-flex gap-2 justify-content-center justify-content-md-start"
+                class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start"
               >
                 <a
                   href="https://www.facebook.com/Kloud.Technologies.Ltd"
