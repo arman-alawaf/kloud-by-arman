@@ -393,131 +393,237 @@
       </button>
     </div>
 
-    <section
-      id="about"
-      style="
-        background-color: #0cd1ff30;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-      "
-    >
-      <div class="container py-5">
-        <div
-          class="row justify-content-md-between justify-content-center align-items-start py-5"
-        >
-          <div class="col-lg-6 order-2 order-lg-1 text-center">
-            <h2 class="mb-4 fw-bold" data-aos="zoom-in">The Kloud Journey</h2>
-            <p class="fs-5" data-aos="slide-up">
-              Launched in <b>2019</b>, <b>Kloud Technologies Limited</b> is a
-              leading ISP and NIX in Bangladesh, delivering blazing-fast, secure
-              connectivity to homes, businesses, and enterprises nationwide.
-              With cutting-edge infrastructure, cloud solutions, and AI-powered
-              automation, we empower clients with reliable internet, IT
-              management, and digital transformation tools. Kloud bridges the
-              digital divide, driving <b>innovation</b>, <b>growth</b>, and a
-              <b>future-ready Bangladesh</b>.
-            </p>
-          </div>
-          <div
-            class="col-lg-4 mb-5 mb-lg-0 pb-4 pb-lg-0 order-1 order-lg-2 d-flex justify-content-center"
-          >
-            <!-- <div
-              class="one-box"
-              style="
-                width: 50%;
-                height: 300px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: url(https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630);
-              "
-            ></div>
-            <div
-              class="two-box"
-              style="
-                width: 100%;
-                height: 300px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: url(https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D);
-              "
-            ></div> -->
+<section class="hook-section py-5 position-relative overflow-hidden">
+<style>
+  .hook-section {
+    background: linear-gradient(135deg, #8F18FF15, #0BD3FF15);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .hook-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .hook-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #8F18FF, #0BD3FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 display-5 text-gradient">
+      Experience Internet Like Never Before
+    </h2>
+    <p class="lead mb-4 text-muted">
+      Kloud Technologies Limited brings you lightning-fast, secure, and reliable
+      connectivity with intelligent features designed for your lifestyle.
+    </p>
 
-            <div class="image-showcase">
-              <div class="image-card img1"></div>
-              <div class="image-card img2"></div>
-            </div>
-
-            <style>
-              .image-showcase {
-                position: relative;
-                width: 300px;
-                height: 200px;
-                perspective: 1200px;
-                overflow: visible;
-              }
-
-              .image-card {
-                position: absolute;
-                inset: 0;
-                border-radius: 20px;
-                background-size: cover;
-                background-position: center;
-                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
-                transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1),
-                  opacity 1.2s ease;
-              }
-
-              .img1 {
-                background-image: url("./assets/img/about1.webp");
-              }
-
-              .img2 {
-                background-image: url("./assets/img/about2.webp");
-              }
-
-              /* Active card (front view) */
-              .about-active {
-                transform: translate(0, 0) rotate(0) scale(1.1);
-                opacity: 1;
-                z-index: 2;
-              }
-
-              /* Hidden card (moves diagonally behind) */
-              .hidden {
-                transform: translate(-60px, 60px) rotate(-10deg) scale(0.85);
-                opacity: 0.7;
-                z-index: 1;
-              }
-            </style>
-
-            <script>
-              const cards = document.querySelectorAll(".image-card");
-              let current = 0;
-
-              function uniqueShuffle() {
-                cards.forEach((card, i) => {
-                  card.classList.remove("about-active", "hidden");
-                  if (i === current) {
-                    card.classList.add("about-active");
-                  } else {
-                    card.classList.add("hidden");
-                  }
-                });
-
-                current = (current + 1) % cards.length;
-              }
-
-              // Start effect
-              uniqueShuffle();
-              setInterval(uniqueShuffle, 3000);
-            </script>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="hook-card shadow-lg p-4 rounded-4 bg-white" data-tilt>
+          <i class="bi bi-speedometer2 text-primary fs-1 mb-3"></i>
+          <h5 class="fw-semibold">Blazing Speed</h5>
+          <p class="text-muted">Enjoy buffer-free streaming and ultra-fast downloads.</p>
         </div>
       </div>
-    </section>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="hook-card shadow-lg p-4 rounded-4 bg-white" data-tilt>
+          <i class="bi bi-shield-check text-success fs-1 mb-3"></i>
+          <h5 class="fw-semibold">Strong Security</h5>
+          <p class="text-muted">Stay safe with advanced protection & auto redundancy.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="hook-card shadow-lg p-4 rounded-4 bg-white" data-tilt>
+          <i class="bi bi-people text-warning fs-1 mb-3"></i>
+          <h5 class="fw-semibold">24/7 Support</h5>
+          <p class="text-muted">Our team is always available to keep you connected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Tilt.js for mouse interaction -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+
+<script>
+  // Initialize tilt effect
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
+</script>
+</section>
+
+
+
+<section
+  id="about"
+  class="position-relative text-light"
+  style="
+    background: linear-gradient(135deg, #0bd3ff30, #8f18ff20);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  "
+>
+  <!-- Decorative background shapes -->
+  <div class="bg-shape shape1"></div>
+  <div class="bg-shape shape2"></div>
+
+  <div class="container py-5 position-relative">
+    <div
+      class="row justify-content-md-between justify-content-center align-items-center py-5"
+    >
+      <!-- Text Content -->
+      <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+        <h2
+          class="mb-4 fw-bold display-5 text-gradient"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
+          The Kloud Journey
+        </h2>
+        <p class="fs-5 text-dark" data-aos="fade-up" data-aos-duration="1000">
+          Since our launch in <b>2019</b>, <b>Kloud Technologies Limited</b> has
+          become one of Bangladesh’s leading ISPs and NIX operators — delivering
+          blazing-fast, secure connectivity nationwide. With cutting-edge
+          infrastructure, <b>cloud services</b>, and <b>AI-driven automation</b>,
+          we empower homes, businesses, and enterprises with seamless IT
+          management and digital transformation.  
+          <br /><br />
+          Our mission is to bridge the digital divide, drive
+          <b>innovation</b>, and build a <b>future-ready Bangladesh</b>.
+        </p>
+      </div>
+
+      <!-- Image Showcase -->
+      <div
+        class="col-lg-5 mb-5 mb-lg-0 order-1 order-lg-2 d-flex justify-content-center"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+      >
+        <div class="image-showcase">
+          <div class="image-card img1"></div>
+          <div class="image-card img2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(90deg, #8f18ff, #0bd3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Background floating shapes */
+    .bg-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.5;
+      animation: floatShape 12s ease-in-out infinite;
+    }
+    .shape1 {
+      width: 400px;
+      height: 400px;
+      top: -80px;
+      left: -100px;
+      background: #8f18ff60;
+    }
+    .shape2 {
+      width: 350px;
+      height: 350px;
+      bottom: -100px;
+      right: -80px;
+      background: #0bd3ff60;
+      animation-delay: 3s;
+    }
+
+    @keyframes floatShape {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-30px) rotate(15deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    /* Image Showcase */
+    .image-showcase {
+      position: relative;
+      width: 320px;
+      height: 220px;
+      perspective: 1200px;
+    }
+
+    .image-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 1.2s ease;
+    }
+
+    .img1 {
+      background-image: url("./assets/img/about1.webp");
+    }
+    .img2 {
+      background-image: url("./assets/img/about2.webp");
+    }
+
+    .about-active {
+      transform: translate(0, 0) rotate(0) scale(1.1);
+      opacity: 1;
+      z-index: 2;
+    }
+    .hidden {
+      transform: translate(-70px, 60px) rotate(-10deg) scale(0.85);
+      opacity: 0.7;
+      z-index: 1;
+    }
+  </style>
+
+  <script>
+    const cards = document.querySelectorAll(".image-card");
+    let current = 0;
+
+    function uniqueShuffle() {
+      cards.forEach((card, i) => {
+        card.classList.remove("about-active", "hidden");
+        if (i === current) {
+          card.classList.add("about-active");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+      current = (current + 1) % cards.length;
+    }
+
+    // Start effect
+    uniqueShuffle();
+    setInterval(uniqueShuffle, 3500);
+  </script>
+</section>
+
 
     <section
       id="packages"
@@ -700,6 +806,172 @@ text-align: center;
         </div>
       </div>
     </section>
+
+<section id="faq" style="background: linear-gradient(135deg, #0bd3ff15, #8f18ff15); min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+  <div class="container py-5 position-relative">
+    <!-- Section Heading -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center" data-aos="zoom-in">
+        <h2 class="fw-bold display-5 mb-3 text-gradient">Got Questions?</h2>
+        <p class="fs-5 text-muted">
+          Explore common questions about <strong>Kloud Technologies</strong> internet services, plans, and support.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion accordion-flush glass-card" id="accordionFlushExample" data-aos="fade-up">
+
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                🚀 How does Kloud Technologies protect my business from outages?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Kloud Technologies ensures <strong>uninterrupted connectivity</strong> with <em>auto redundancy</em>. If your main line fails, a backup instantly activates—keeping your business online 24/7.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                🔄 Can I change my internet plan without interruptions?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Absolutely. You can upgrade or switch your plan anytime. Our support ensures a <strong>smooth transition</strong> without downtime.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                💎 Do I pay extra for the premium benefits?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                No hidden charges. All benefits like <strong>priority support</strong>, <strong>smart monitoring</strong>, and <strong>enhanced security</strong> are included with your chosen plan.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour">
+                📞 How can I contact Kloud Technologies support?
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Our support team is available <strong>24/7</strong> via phone, email, or live chat.  
+                Visit our <a href="#" data-bs-toggle="modal" data-bs-target="#Contact" class="fw-bold text-gradient">Contact</a> page for all options.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Shapes (for premium effect) -->
+  <div class="floating-shape"></div>
+  <div class="floating-shape delay"></div>
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(90deg, #8F18FF, #0BD3FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Glassmorphism effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      padding: 10px;
+    }
+
+    /* Accordion Custom */
+    .accordion-button {
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border-radius: 12px !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: linear-gradient(90deg, #8F18FF20, #0BD3FF20);
+      color: #8F18FF;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .accordion-body {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* Floating shapes */
+    .floating-shape {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #0bd3ff55, transparent 70%);
+      border-radius: 50%;
+      top: 10%;
+      left: 5%;
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    .floating-shape.delay {
+      top: auto;
+      bottom: 10%;
+      right: 5%;
+      left: auto;
+      background: radial-gradient(circle, #8f18ff55, transparent 70%);
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) }
+      50% { transform: translateY(-30px) }
+    }
+  </style>
+</section>
+
+
+    <section id="" style="background-color: #4f72ff30; min-height: 100vh; display: flex; align-items: center;">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-3" data-aos="zoom-in">
+            <h2 class="fw-bold">Hear from Our Customers</h2>
+            <p class="fs-5">The impact of our services in their words</p>
+          </div>
+          <div class="col-12"></div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
 
     <section id="blogs">
       <div class="container py-5">
