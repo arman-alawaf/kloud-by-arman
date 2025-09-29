@@ -1588,232 +1588,193 @@
       </div>
     </div>
 
-    <!-- Contact -->
-    <div
-      class="modal fade"
-      id="Contact"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div
-            class="modal-header"
-            style="
-              background: linear-gradient(90deg, var(--color1), var(--color3));
-              color: white;
-            "
-          >
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Your trust, our greatest priority.
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="name_contact">
-                    Full Name
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name_contact"
-                    id="name_contact"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="phone_contact">
-                    Mobile Number
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="phone_contact"
-                    id="phone_contact"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-md-12 mb-3">
-                  <label for="email_contact">
-                    Email
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email_contact"
-                    id="email_contact"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-md-12 mb-3">
-                  <label for="subject">
-                    Subject
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-md-12 mb-3">
-                  <label for="message">
-                    Message
-                    <span class="text-danger">*</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="2"
-                    cols="33"
-                    class="form-control my-2"
-                    required
-                  ></textarea>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="button" class="btn btn-primary px-5">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+<!-- Contact Modal -->
+<div class="modal fade" id="Contact" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="border-radius: 25px; overflow: hidden;">
+      
+      <!-- Modal Header -->
+      <div class="modal-header" style="background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; border-bottom: none; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        <h5 class="modal-title fs-5 fw-bold" id="contactModalLabel">Your trust, our greatest priority</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
 
-    <!-- Pay -->
-    <div
-      class="modal fade"
-      id="Pay"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div
-            class="modal-header"
-            style="
-              background: linear-gradient(90deg, var(--color1), var(--color3));
-              color: white;
-            "
-          >
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Smart Pay</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="row">
-                <div class="col-md-12 mb-3">
-                  <label for="user_id_pay">
-                    User ID
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="user_id_pay"
-                    id="user_id_pay"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-12 text-center">
-                  <button type="button" class="btn btn-primary px-5">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+      <!-- Modal Body -->
+      <div class="modal-body" style="background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); padding: 30px;">
+        <form>
+          <div class="row g-3">
 
-    <!-- Care -->
-    <div
-      class="modal fade"
-      id="Care"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div
-            class="modal-header"
-            style="
-              background: linear-gradient(90deg, var(--color1), var(--color3));
-              color: white;
-            "
-          >
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Self Care</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold" for="name_contact">Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="name_contact" class="form-control form-control-lg" placeholder="John Doe" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold" for="phone_contact">Mobile Number <span class="text-danger">*</span></label>
+              <input type="text" id="phone_contact" class="form-control form-control-lg" placeholder="+880 1234 567890" required>
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="email_contact">Email <span class="text-danger">*</span></label>
+              <input type="email" id="email_contact" class="form-control form-control-lg" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="subject">Subject <span class="text-danger">*</span></label>
+              <input type="text" id="subject" class="form-control form-control-lg" placeholder="Enter subject" required>
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="message">Message <span class="text-danger">*</span></label>
+              <textarea id="message" rows="4" class="form-control form-control-lg" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-gradient btn-lg px-5" style="border-radius: 50px; background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; transition: all 0.3s ease;">
+                Send Message
+              </button>
+            </div>
+
           </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="row">
-                <div class="col-md-12 mb-3">
-                  <label for="user_id">
-                    User ID
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="user_id"
-                    id="user_id"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-md-12 mb-3">
-                  <label for="password">
-                    Password
-                    <span class="text-danger">*</span>
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    class="form-control my-2"
-                    required
-                  />
-                </div>
-                <div class="col-12 text-center">
-                  <button type="button" class="btn btn-primary px-5">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
+  </div>
+
+  <style>
+    /* Input focus effect */
+    .form-control:focus {
+      border-color: var(--color1,#8F18FF);
+      box-shadow: 0 0 10px rgba(143, 24, 255, 0.3);
+    }
+
+    /* Button hover effect */
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(143, 24, 255, 0.4);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .modal-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</div>
+
+
+<!-- Smart Pay Modal -->
+<div class="modal fade" id="Pay" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content" style="border-radius: 25px; overflow: hidden;">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; border-bottom: none; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        <h5 class="modal-title fs-5 fw-bold" id="payModalLabel">Smart Pay</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); padding: 30px;">
+        <form>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="user_id_pay">User ID <span class="text-danger">*</span></label>
+              <input type="text" id="user_id_pay" class="form-control form-control-lg" placeholder="Enter your User ID" required>
+            </div>
+
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-gradient btn-lg px-5" style="border-radius: 50px; background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; transition: all 0.3s ease;">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Input focus effect */
+    #user_id_pay:focus {
+      border-color: var(--color1,#8F18FF);
+      box-shadow: 0 0 10px rgba(143, 24, 255, 0.3);
+    }
+
+    /* Button hover effect */
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(143, 24, 255, 0.4);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .modal-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</div>
+
+
+<!-- Self Care Modal -->
+<div class="modal fade" id="Care" tabindex="-1" aria-labelledby="careModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content" style="border-radius: 25px; overflow: hidden;">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; border-bottom: none; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        <h5 class="modal-title fs-5 fw-bold" id="careModalLabel">Self Care</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); padding: 30px;">
+        <form>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="user_id">User ID <span class="text-danger">*</span></label>
+              <input type="text" id="user_id" class="form-control form-control-lg" placeholder="Enter your User ID" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label fw-semibold" for="password">Password <span class="text-danger">*</span></label>
+              <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter your password" required>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-gradient btn-lg px-5" style="border-radius: 50px; background: linear-gradient(135deg, var(--color1,#8F18FF), var(--color2,#0BD3FF)); color: white; transition: all 0.3s ease;">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    /* Input focus effect */
+    #user_id:focus, #password:focus {
+      border-color: var(--color1,#8F18FF);
+      box-shadow: 0 0 10px rgba(143, 24, 255, 0.3);
+    }
+
+    /* Button hover effect */
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(143, 24, 255, 0.4);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .modal-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</div>
+
 
     <div class="cursor">
       <style>
