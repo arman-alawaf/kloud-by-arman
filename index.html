@@ -269,12 +269,12 @@
           data-bs-slide-to="1"
           aria-label="Slide 2"
         ></button>
-        <!-- <button
+        <button
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide-to="2"
           aria-label="Slide 3"
-        ></button> -->
+        ></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="4000">
@@ -339,7 +339,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="carousel-item" data-bs-interval="4000">
+        <div class="carousel-item" data-bs-interval="4000">
           <div
             style="
               width: 100%;
@@ -354,7 +354,7 @@
               <div class="row justify-content-around align-items-center">
                 <div class="col-md-5 p-4 p-md-0">
                   <img
-                    src="https://carnival.com.bd/uploads/cms/home-banner-text-03.svg"
+                    src="./assets/img/sliders/Slide-3.png"
                     alt="image"
                     class="img-fluid"
                   />
@@ -369,7 +369,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
       <button
         class="carousel-control-prev"
@@ -1890,7 +1890,7 @@
 </div>
 
 
-    <div class="cursor">
+    <!-- <div class="cursor">
       <style>
         body {
           cursor: none;
@@ -1927,7 +1927,119 @@
           cursor.style.left = e.clientX + "px";
         });
       </script>
-    </div>
+    </div> -->
+
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<style>
+  body {
+    cursor: none; /* hide default */
+  }
+
+  /* Small inner dot */
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #0bd3ff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease;
+  }
+
+  /* Larger outline */
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgba(247, 242, 0, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s ease;
+    mix-blend-mode: difference;
+  }
+
+  /* Hover effect */
+  a:hover ~ .cursor-outline,
+  button:hover ~ .cursor-outline {
+    width: 55px;
+    height: 55px;
+    border-color: rgba(11, 211, 255, 0.8);
+    box-shadow: 0 0 25px rgba(11, 211, 255, 0.5);
+  }
+
+  /* Click pulse animation */
+  .cursor-outline.click {
+    animation: clickPulse 0.4s forwards;
+  }
+
+  @keyframes clickPulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.6);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  const cursorDot = document.querySelector(".cursor-dot");
+  const cursorOutline = document.querySelector(".cursor-outline");
+
+  let mouseX = 0, mouseY = 0;
+  let outlineX = 0, outlineY = 0;
+
+  // Smooth trailing effect
+  function animate() {
+    outlineX += (mouseX - outlineX) * 0.15;
+    outlineY += (mouseY - outlineY) * 0.15;
+
+    cursorOutline.style.top = outlineY + "px";
+    cursorOutline.style.left = outlineX + "px";
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Move dot instantly
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    cursorDot.style.top = mouseY + "px";
+    cursorDot.style.left = mouseX + "px";
+  });
+
+  // Click animation
+  document.addEventListener("mousedown", () => {
+    cursorOutline.classList.add("click");
+  });
+  document.addEventListener("mouseup", () => {
+    setTimeout(() => cursorOutline.classList.remove("click"), 200);
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
 
     <div class="back-to-top" id="backToTop" data-aos="zoom-out">
       <style>
