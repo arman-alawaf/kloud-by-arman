@@ -225,7 +225,10 @@
       </script>
     </nav>
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" style="
+    background: linear-gradient(135deg, #8F18FF15, #0BD3FF15);
+    background: linear-gradient(135deg, #0bd3ff30, #8f18ff20);
+    ">
       <style>
         .carousel-indicators [data-bs-target] {
           box-sizing: content-box;
@@ -403,7 +406,7 @@
       </button>
     </div>
 
-<section class="hook-section py-5 position-relative overflow-hidden">
+<!-- <section class="hook-section py-5 position-relative overflow-hidden">
 <style>
   .hook-section {
     background: linear-gradient(135deg, #8F18FF15, #0BD3FF15);
@@ -457,6 +460,142 @@
         </div>
       </div>
     </div>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+
+<script>
+  
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
+</script>
+</section> -->
+
+<section class="hook-section py-5 position-relative overflow-hidden">
+<style>
+  .hook-section {
+    background: linear-gradient(135deg, #8F18FF15, #0BD3FF15);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .hook-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .hook-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #8F18FF, #0BD3FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 display-5 text-gradient" data-aos="zoom-in">
+      Kloud comes with a wide array of services
+    </h2>
+
+<div class="row justify-content-center">
+  <style>
+    .hook-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hook-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hook-card p {
+      flex-grow: 1;
+    }
+  </style>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-tilt>
+      <i class="bi bi-speedometer2 text-primary fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Enterprise Internet</h5>
+      <p class="text-muted">
+        Kloud Technologies Limited delivers enterprise-grade internet connectivity with guaranteed uptime and superior bandwidth performance. Our dedicated internet services are engineered for businesses that demand speed, reliability, and 24/7 support.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="200" data-tilt>
+      <i class="bi bi-shield-check text-success fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Home Broadband</h5>
+      <p class="text-muted">
+        Enjoy seamless browsing, streaming, and online gaming with Kloud’s high-speed home broadband. Our fiber connectivity ensures consistent performance, flexible plans, and dependable technical support for every household.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="400" data-tilt>
+      <i class="bi bi-people text-warning fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Data Connectivity</h5>
+      <p class="text-muted">
+        We provide secure and scalable data connectivity solutions, including point-to-point, MPLS VPN, and leased line services. Kloud ensures your business stays connected across locations with low latency and top-tier network security.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="600" data-tilt>
+      <i class="bi bi-telephone text-primary fs-1 mb-3"></i>
+      <h5 class="fw-semibold">IP Telephony</h5>
+      <p class="text-muted">
+        Revolutionize your communication with Kloud’s IP Telephony service. Experience crystal-clear voice, advanced call features, and cost-effective VoIP solutions — all backed by enterprise-grade infrastructure.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="800" data-tilt>
+      <i class="bi bi-chat-square-text text-success fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Bulk SMS Gateway</h5>
+      <p class="text-muted">
+        Communicate smarter with Kloud’s Bulk SMS Gateway. Deliver alerts, marketing messages, and notifications instantly with reliable delivery rates and easy integration with your existing business systems.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="1000" data-tilt>
+      <i class="bi bi-cloud-check text-warning fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Domain & Hosting</h5>
+      <p class="text-muted">
+        Build and secure your online identity with Kloud’s Domain & Hosting solutions. From domain registration to cloud-based hosting, we ensure high availability, data protection, and blazing-fast performance.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4 d-flex">
+    <div class="hook-card shadow-lg p-4 rounded-4 bg-white w-100" data-aos="zoom-in" data-aos-delay="1200" data-tilt>
+      <i class="bi bi-gear-fill text-primary fs-1 mb-3"></i>
+      <h5 class="fw-semibold">Managed IT Services</h5>
+      <p class="text-muted">
+        Focus on growth while Kloud manages your IT infrastructure. Our Managed IT Services cover network monitoring, cybersecurity, cloud management, and proactive support to keep your systems always running smoothly.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
   </div>
 <!-- Tilt.js for mouse interaction -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
@@ -1155,7 +1294,7 @@
       <div class="col-md-4">
         <div class="testimonial-card shadow-lg border-0 p-4" data-aos="fade-up" data-aos-delay="200">
           <div class="d-flex align-items-center mb-3">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="testimonial-img">
+            <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="testimonial-img"> -->
             <div class="ms-3">
               <h6 class="fw-bold mb-0">Farzana Akter</h6>
               <small class="text-muted">Chattogram</small>
@@ -1176,7 +1315,7 @@
       <div class="col-md-4">
         <div class="testimonial-card shadow-lg border-0 p-4" data-aos="fade-up">
           <div class="d-flex align-items-center mb-3">
-            <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Client" class="testimonial-img">
+            <!-- <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Client" class="testimonial-img"> -->
             <div class="ms-3">
               <h6 class="fw-bold mb-0">Md. Asif Rahman</h6>
               <small class="text-muted">Dhaka</small>
@@ -1197,7 +1336,7 @@
       <div class="col-md-4">
         <div class="testimonial-card shadow-lg border-0 p-4" data-aos="fade-up" data-aos-delay="400">
           <div class="d-flex align-items-center mb-3">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="testimonial-img">
+            <!-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="testimonial-img"> -->
             <div class="ms-3">
               <h6 class="fw-bold mb-0">Tanvir Hossain</h6>
               <small class="text-muted">Sylhet</small>
